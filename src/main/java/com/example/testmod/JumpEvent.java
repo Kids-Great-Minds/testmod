@@ -25,7 +25,7 @@ public class JumpEvent {
 
         if(e.getEntity() instanceof Player player){
 
-            player.sendSystemMessage(Component.literal(player.getName().getString() + "Jumped!"));
+            player.sendSystemMessage(Component.literal(player.getName().getString() + " Jumped!"));
 
         }
 
