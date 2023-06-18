@@ -24,8 +24,13 @@ public class JumpEvent {
     public void onLivingJump(LivingEvent.LivingJumpEvent e){
 
         if(e.getEntity() instanceof Player player){
+            if(!player.getLevel().isClientSide()){
+                
+                player.sendSystemMessage(Component.literal(player.getName().getString() + " Jumped!"));
 
-            player.sendSystemMessage(Component.literal(player.getName().getString() + " Jumped!"));
+
+            }
+
 
         }
 
