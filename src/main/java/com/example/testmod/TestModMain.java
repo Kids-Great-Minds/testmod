@@ -31,6 +31,7 @@ public class TestModMain
 
 
         modEventBus.addListener(this::commonSetup);
+        ItemInit.ITEMS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(new JumpEvent());
         MinecraftForge.EVENT_BUS.register(new DragonEvent());
