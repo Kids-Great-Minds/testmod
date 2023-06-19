@@ -1,4 +1,4 @@
-package com.example.testmod;
+package com.example.testmod.events;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

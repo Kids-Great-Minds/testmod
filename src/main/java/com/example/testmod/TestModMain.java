@@ -1,16 +1,15 @@
 package com.example.testmod;
 
+import com.example.testmod.events.CustomSpawnEvent;
+import com.example.testmod.events.DragonEvent;
+import com.example.testmod.events.JumpEvent;
+import com.example.testmod.events.SpellEvent;
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
 import java.util.Random;
@@ -25,10 +24,9 @@ public class TestModMain
     public static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
 
-    public static Random RAND;
+    public static final Random RAND = new Random();
     public TestModMain()
     {
-        RAND = new Random();
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
 

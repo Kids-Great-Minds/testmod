@@ -1,4 +1,4 @@
-package com.example.testmod;
+package com.example.testmod.events;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -39,9 +39,9 @@ public class CustomSpawnEvent {
             pos = pos.offset(0,2,0);
 
             Skeleton bob = new Skeleton(EntityType.SKELETON, world);
-            bob.setCustomName(Component.literal("Bob The Skeleton"));
             bob.setPos(pos.getX(), pos.getY(), pos.getZ());
 
+            bob.setCustomName(Component.literal("Bob The Skeleton"));
             world.addFreshEntity(bob);
 
         }
@@ -68,15 +68,13 @@ public class CustomSpawnEvent {
             helmets.add(new ItemStack(Items.DIAMOND_HELMET));
             helmets.add(new ItemStack(Items.LEATHER_HELMET));
             helmets.add(new ItemStack(Items.IRON_HELMET));
-            LOGGER.info(helmets.toString());
 
-
-            skele.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Items.DIAMOND_CHESTPLATE));
-            Integer num = RAND.nextInt(3);
+            int num = RAND.nextInt(helmets.size());
             skele.setItemSlot(EquipmentSlot.HEAD, helmets.get(num));
-            LOGGER.info(num.toString());
-            skele.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Items.DIAMOND_LEGGINGS));
-            skele.setItemSlot(EquipmentSlot.FEET, new ItemStack(Items.DIAMOND_BOOTS));
+
+                skele.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Items.DIAMOND_CHESTPLATE));
+                skele.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Items.DIAMOND_LEGGINGS));
+                skele.setItemSlot(EquipmentSlot.FEET, new ItemStack(Items.DIAMOND_BOOTS));
         }
 
     }
