@@ -32,6 +32,7 @@ public class TestModMain
 
         MinecraftForge.EVENT_BUS.register(new JumpEvent());
         MinecraftForge.EVENT_BUS.register(new DragonEvent());
+        MinecraftForge.EVENT_BUS.register(new SpellEvent());
 
 
     }
