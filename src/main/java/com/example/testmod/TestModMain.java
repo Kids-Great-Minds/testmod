@@ -13,6 +13,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
+import java.util.Random;
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(TestModMain.MODID)
 public class TestModMain
@@ -23,8 +25,10 @@ public class TestModMain
     public static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
 
+    public static Random RAND;
     public TestModMain()
     {
+        RAND = new Random();
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
 
@@ -33,6 +37,7 @@ public class TestModMain
         MinecraftForge.EVENT_BUS.register(new JumpEvent());
         MinecraftForge.EVENT_BUS.register(new DragonEvent());
         MinecraftForge.EVENT_BUS.register(new SpellEvent());
+        MinecraftForge.EVENT_BUS.register(new CustomSpawnEvent());
 
 
     }
