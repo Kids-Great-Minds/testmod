@@ -2,6 +2,7 @@
   "itemGroup.testmod": "Test Mod",
 
   "item.testmod.ender_ingot": "Ender Ingot",
+  "item.testmod.ender_pickaxe": "Ender Pickaxe",
 
-  "item.testmod.ender_pickaxe": "Ender Pickaxe"
+  "block.testmod.ender_block": "Ender Block"
 }

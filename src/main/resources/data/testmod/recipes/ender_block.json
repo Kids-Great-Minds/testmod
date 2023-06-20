@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+
+    "X": {
+      "item": "testmod:ender_ingot"
+    }
+  },
+  "result": {
+    "item": "testmod:ender_block"
+  }
+}
