@@ -1,9 +1,6 @@
 package com.example.testmod;
 
-import com.example.testmod.events.CustomSpawnEvent;
-import com.example.testmod.events.DragonEvent;
-import com.example.testmod.events.JumpEvent;
-import com.example.testmod.events.SpellEvent;
+import com.example.testmod.events.*;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -38,6 +35,7 @@ public class TestModMain
         MinecraftForge.EVENT_BUS.register(new DragonEvent());
         MinecraftForge.EVENT_BUS.register(new SpellEvent());
         MinecraftForge.EVENT_BUS.register(new CustomSpawnEvent());
+        MinecraftForge.EVENT_BUS.register(new SuperJump());
 
 
     }
