@@ -1,5 +1,7 @@
 package com.example.testmod;
 
+import com.example.testmod.items.EnderIngot;
+import com.example.testmod.items.EnderPick;
 import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -77,9 +79,9 @@ public class ItemInit {
     public static final ModCreativeTab TAB = new ModCreativeTab(CreativeModeTab.TABS.length, "testmod");
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TestModMain.MODID);
-    public static final RegistryObject<Item> ENDER_INGOT = ITEMS.register("ender_ingot", ()->new Item(new Item.Properties().tab(TAB)));
+    public static final RegistryObject<Item> ENDER_INGOT = ITEMS.register("ender_ingot", ()->new EnderIngot());
     public static final RegistryObject<Item> ENDER_PICK = ITEMS.register("ender_pickaxe",
-            () -> new PickaxeItem(ModItemTier.ENDER_INGOT,1, -1.0F, new Item.Properties().tab(TAB)));
+            () -> new EnderPick(ModItemTier.ENDER_INGOT,5, -2.0F, new Item.Properties().tab(TAB)));
 
 
 

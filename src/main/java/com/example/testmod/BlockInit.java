@@ -1,5 +1,6 @@
 package com.example.testmod;
 
+import com.example.testmod.blocks.EnderBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -16,7 +17,7 @@ import java.util.function.Supplier;
 public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TestModMain.MODID);
 
-    public static final RegistryObject<Block> ENDER_BLOCK = registerBlock("ender_block" , ()->new Block(BlockBehaviour.Properties.of(Material.STONE)));
+    public static final RegistryObject<Block> ENDER_BLOCK = registerBlock("ender_block" , ()->new EnderBlock());
 
 
 
